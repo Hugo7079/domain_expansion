@@ -139,51 +139,48 @@ const App: React.FC = () => {
 
   if (gameState === GameState.API_KEY_CHECK) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-100 to-indigo-100 text-gray-900 flex items-center justify-center p-6">
-        <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="p-8 bg-white rounded-lg shadow-lg">
-            <h1 className="text-4xl font-bold mb-2 font-serif">呪術廻戦</h1>
-            <p className="text-lg text-gray-600 mb-6">領域展開 — 在鏡頭前做出特定手勢以觸發角色專屬特效。請先提供 API Key 後開始。</p>
-
-            <label className="block text-sm font-medium mb-2 text-gray-700">API Key</label>
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6">
+        <div className="max-w-md w-full">
+          <h1 className="text-4xl font-bold mb-2 font-serif text-center">呪術廻戦</h1>
+          <p className="text-xl mb-8 text-gray-400 text-center">領域展開</p>
+          
+          <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-4">
+            <label className="block text-sm font-medium mb-2 text-gray-300">
+              Gemini API Key
+            </label>
             <input
               type="password"
               value={apiKeyInput}
               onChange={(e) => setApiKeyInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmitApiKey()}
               placeholder="AIza..."
-              className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-indigo-400 transition-colors mb-3"
+              className="w-full bg-black border border-gray-600 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors mb-3"
             />
             {apiKeyError && (
               <p className="text-red-500 text-sm mb-3">{apiKeyError}</p>
             )}
-            <div className="flex gap-3">
-              <button
-                onClick={handleSubmitApiKey}
-                className="flex-1 bg-indigo-600 text-white px-6 py-3 rounded font-semibold hover:bg-indigo-700 transition-colors"
+            <button
+              onClick={handleSubmitApiKey}
+              className="w-full bg-white text-black px-6 py-3 rounded font-bold hover:bg-gray-200 transition-colors mb-3"
+            >
+              開始
+            </button>
+            
+            <div className="text-center">
+              <a 
+                href="https://aistudio.google.com/apikey" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-blue-400 hover:text-blue-300 underline"
               >
-                開始
-              </button>
-              <button
-                onClick={handleSelectKey}
-                className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded font-semibold hover:bg-gray-300 transition-colors"
-              >
-                選擇 API Key
-              </button>
+                取得 API Key
+              </a>
             </div>
-
-            <p className="text-xs text-gray-500 mt-4">API Key 僅儲存在你的瀏覽器（localStorage），請勿把金鑰提交到公開 repository。</p>
           </div>
-
-          <div className="p-8 flex flex-col items-center justify-center">
-            <div className="w-full h-56 rounded-lg bg-gradient-to-r from-indigo-500 to-pink-500 flex items-center justify-center text-white text-center shadow-md">
-              <div>
-                <h2 className="text-2xl font-bold">準備好開啟你的領域展開了嗎？</h2>
-                <p className="mt-2 opacity-90">允許使用鏡頭，做出手勢，看看 AI 會辨識出哪位角色的領域。</p>
-              </div>
-            </div>
-            <div className="text-sm text-gray-600 mt-6">（如果你已經有 API Key，請輸入後按「開始」）</div>
-          </div>
+          
+          <p className="text-xs text-gray-500 text-center">
+            API Key 將儲存在您的瀏覽器中，不會上傳到任何伺服器
+          </p>
         </div>
       </div>
     );
