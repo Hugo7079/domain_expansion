@@ -2,19 +2,58 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# 呪術廻戦 — 領域展開（Domain Expansion）
 
-This contains everything you need to run your app locally.
+這是一個以「領域展開」為主題的互動網頁小玩具，使用前端攝影機與 AI 分析手勢（或姿勢）來觸發視覺效果。整個專案為前端靜態應用，使用者的 API Key 會儲存在本機瀏覽器（localStorage），不會上傳到任何伺服器。
 
-View your app in AI Studio: https://ai.studio/apps/drive/1P-zCfIH3Fa0GLlF_5UXD4RQ2XN6nics1
+**主要功能**
+- 即時攝影機擷取手勢或姿勢
+- 呼叫後端/第三方 AI 分析影像（需提供 API Key）
+- 根據分析結果顯示角色專屬特效與領域畫面
 
-## Run Locally
+## 本機執行
 
-**Prerequisites:**  Node.js
+**需求**: Node.js、npm
 
+1. 安裝相依套件：
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+```
+
+2. 啟動開發伺服器：
+
+```bash
+npm run dev
+```
+
+3. 開啟瀏覽器並前往 `http://localhost:5173`（或終端顯示的 URL），在啟動時會提示輸入 API Key；或在瀏覽器開發工具中執行：
+
+```js
+localStorage.setItem('gemini_api_key', 'YOUR_API_KEY')
+```
+
+> 安全提醒：請勿把實際的 API Key、金鑰檔或敏感資訊提交到版本控制系統（如 GitHub）。在 README、程式碼或公開設定檔中不要包含任何密鑰。
+
+## 部署
+
+此專案可以部署為靜態站點（例如 GitHub Pages 或其他靜態託管服務）。常見流程：
+
+```bash
+npm run build
+# 將 build 輸出部署到 gh-pages 或你選擇的靜態主機
+```
+
+如果需要，我可以協助新增 GitHub Action 自動部署的範例 workflow。
+
+## 貢獻
+
+歡迎提出 issue 或 PR：修正錯誤、改進 UI 或新增角色/特效。
+
+## 授權
+
+本專案採用 MIT License（請見 `LICENSE`）。
+
+---
+
+若你想讓 README 添加更多範例或部署細節（例如 GitHub Action 範本），告訴我我要加哪一部分。 
