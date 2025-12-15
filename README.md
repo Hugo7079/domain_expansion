@@ -49,7 +49,3 @@ npm run build
 ## 授權
 
 本專案採用 MIT License（請見 `LICENSE`）。
-
----
-
-若你想讓 README 添加更多範例或部署細節（例如 GitHub Action 範本），告訴我我要加哪一部分。 
