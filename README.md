@@ -1,10 +1,6 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # 呪術廻戦 — 領域展開（Domain Expansion）
 
-這是一個以「領域展開」為主題的互動網頁小玩具，使用前端攝影機與 AI 分析手勢（或姿勢）來觸發視覺效果。整個專案為前端靜態應用，使用者的 API Key 會儲存在本機瀏覽器（localStorage），不會上傳到任何伺服器。
+這是一個以「領域展開」為主題的互動網頁小遊戲，使用前端攝影機與 AI 分析手勢（或姿勢）來觸發視覺效果。整個專案為前端靜態應用，使用者的 API Key 會儲存在本機瀏覽器（localStorage），不會上傳到任何伺服器。
 
 **主要功能**
 - 即時攝影機擷取手勢或姿勢
