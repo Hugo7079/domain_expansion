@@ -1,0 +1,7 @@
+{
+  "name": "Jujutsu Kaisen: Domain Expansion Trainer",
+  "description": "Master the art of Domain Expansion. Use your camera to perform hand signs. If your Cursed Energy flow (gesture) is correct, the AI will manifest your Domain via generative video.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
