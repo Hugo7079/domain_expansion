@@ -39,13 +39,3 @@ localStorage.setItem('gemini_api_key', 'YOUR_API_KEY')
 npm run build
 # 將 build 輸出部署到 gh-pages 或你選擇的靜態主機
 ```
-
-如果需要，我可以協助新增 GitHub Action 自動部署的範例 workflow。
-
-## 貢獻
-
-歡迎提出 issue 或 PR：修正錯誤、改進 UI 或新增角色/特效。
-
-## 授權
-
-本專案採用 MIT License（請見 `LICENSE`）。
